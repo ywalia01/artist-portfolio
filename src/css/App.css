@@ -65,12 +65,12 @@ nav ul li a {
     text-decoration: none;
     color: var(--color-2);
 }
-nav ul li {
+/* nav ul li {
     opacity: 70%;
 }
 nav ul li:hover {
     opacity: 1;
-}
+} */
 #nav-left ul {
     display: flex;
     flex-direction: row;
@@ -90,9 +90,9 @@ nav ul li:hover {
     opacity: 1;
     margin: 0px auto;
 }
-#nav-center ul li {
+/* #nav-center ul li {
     opacity: 1;
-}
+} */
 #nav-right ul {
     display: flex;
     flex-direction: row;
