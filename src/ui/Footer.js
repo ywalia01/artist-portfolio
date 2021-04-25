@@ -2,9 +2,9 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div>
-            
-        </div>
+        <footer>
+            <p>Website designed by <a href="https://ywalia01.netlify.app/" target="_blank" rel="noopener noreferrer">YASH WALIA</a></p>
+        </footer>
     )
 }
 

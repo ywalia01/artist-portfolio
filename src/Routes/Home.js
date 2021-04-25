@@ -3,7 +3,7 @@ import Gallery from '../ui/Gallery';
 
 function Home() {
     return (
-        <div>
+        <div className="container">
             <Gallery/>
         </div>
     )

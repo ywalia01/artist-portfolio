@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AboutForm() {
+function Admin() {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function AboutForm() {
     )
 }
 
-export default AboutForm
+export default Admin
