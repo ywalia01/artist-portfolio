@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { SOCIAL_LINKS } from '../data'
 
-function Header() {
+const Header = () => {
     return (
         <header>
             <nav>
@@ -34,4 +34,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Header;

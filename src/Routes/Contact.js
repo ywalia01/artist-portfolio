@@ -1,7 +1,7 @@
 import React from 'react'
-import ContactForm from '../ui/ContactForm'
+import ContactForm from '../components/ContactForm'
 
-function Contact() {
+const Contact = () => {
     return (
         <div className="container">
             <ContactForm />
@@ -9,4 +9,4 @@ function Contact() {
     )
 }
 
-export default Contact
+export default Contact;

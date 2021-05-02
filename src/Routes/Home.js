@@ -1,7 +1,7 @@
 import React from 'react'
-import Gallery from '../ui/Gallery';
+import Gallery from '../components/Gallery';
 
-function Home() {
+const Home = () => {
     return (
         <div className="container">
             <Gallery/>
@@ -9,4 +9,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Home;
