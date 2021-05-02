@@ -24,7 +24,7 @@ jobs:
       id: sync
       uses: aormsby/Fork-Sync-With-Upstream-action@v2.1
       with:
-        upstream_repository: https://github.com/ywalia01/artist-portfolio
+        upstream_repository: ywalia01/artist-portfolio
         upstream_branch: main
         target_branch: main
         git_pull_args: --ff-only                    # optional arg use, defaults to simple 'pull'
