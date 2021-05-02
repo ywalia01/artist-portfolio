@@ -1,9 +1,8 @@
 on:
   schedule:
     - cron:  '0 7 * * *'
-    # scheduled at 07:00 every Monday and Thursday
 
-  workflow_dispatch:  # click the button on Github repo!
+  workflow_dispatch:
 
 
 jobs:
@@ -12,25 +11,20 @@ jobs:
     name: Sync main with upstream latest
 
     steps:
-    # Step 1: run a standard checkout action, provided by github
     - name: Checkout main
       uses: actions/checkout@v2
       with:
         ref: main
-        # submodules: 'recursive'     ### may be needed in your situation
 
-    # Step 2: run this sync action - specify the upstream repo, upstream branch to sync with, and target sync branch
     - name: Pull (Fast-Forward) upstream changes
       id: sync
-      uses: aormsby/Fork-Sync-With-Upstream-action@v2.1
+      uses: aormsby/Fork-Sync-With-Upstream-action@v2.3
       with:
         upstream_repository: ywalia01/artist-portfolio
         upstream_branch: main
         target_branch: main
-        git_pull_args: --ff-only                    # optional arg use, defaults to simple 'pull'
-        github_token: ${{ secrets.MySecret }}   # optional, for accessing repos that require authentication
+        github_token: ${{ secrets.MySecret }}
 
-    # Step 3: Display a message if 'sync' step had new commits (simple test)
     - name: Check for new commits
       if: steps.sync.outputs.has_new_commits
       run: echo "There were new commits."
