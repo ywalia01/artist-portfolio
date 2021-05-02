@@ -1,2 +1,19 @@
-- name: Fork Sync
-  uses: tgymnich/fork-sync@v1.2.1
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '30 5,17 * * *' # every 30 minutes
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: TG908/fork-sync@v1.1
+        with:
+          github_token: ${{ secrets.MySecret }}
+          owner: sourabharya11
+          base: main
+          head: main
